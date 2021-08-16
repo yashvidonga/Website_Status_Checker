@@ -38,7 +38,7 @@ input[type=text] {
 }
       
 input[type=text]:focus {
-width: 800px;
+width: 700px;
 }
 
 ::-webkit-input-placeholder {
