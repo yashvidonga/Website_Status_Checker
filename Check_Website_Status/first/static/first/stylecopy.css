@@ -6,7 +6,7 @@ body {
     rgba(0, 238, 255, 0.959) 25%,
     rgb(255, 255, 255)
   );
-  background-image: url(images/background2.png);
+  background-image: url('Website_Status_Checker/Check_Website_Status/first/static/first/images/background2.png');
 }
 .heading {
   /* background-image: url(images/background2.png); */
@@ -127,7 +127,7 @@ input[type="text"] {
   box-sizing: border-box;
   border: 2px solid #ccc;
   border-radius: 20px;
-  background-image: url('images/searchicon.png');
+  background-image: url('Website_Status_Checker/Check_Website_Status/first/static/first/images/searchicon.png');
   background-repeat: no-repeat;
   background-size: contain;
   background-position: right;
