@@ -1,4 +1,4 @@
-<!-- {% load staticfiles %} -->
+{% load static %} 
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -19,7 +19,7 @@
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Ubuntu:wght@400;500;700&display=swap");
     </style>
-    <link rel="stylesheet" href="Website_Status_Checker/Check_Website_Status/first/static/first/stylecopy.css" />
+    <link rel="stylesheet" href="{% static 'first/stylecopy.css' %}" />
 
     <title>Live webite status checker</title>
   </head>
@@ -29,7 +29,7 @@
         <div class="marker"></div>
         <br />
         Welcome to Checkify.com
-        <img src="Website_Status_Checker/Check_Website_Status/first/static/first/images/Check2.png">
+        <img src="{% static 'first/images/Check2.png' %}">
       </div>
       <h2></h2>
     </div>
