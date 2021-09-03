@@ -1,20 +1,27 @@
 from django.http import HttpResponse
 from django.shortcuts import render
-#from .models import websiteurl
-import urllib.request 
+from .models import websiteurl
+import urllib 
 
 
 def home(request):
     return render(request,'first/home copy.html')
 
 def check(request):
-    web = request.GET.get('text','default')
+    web = request.GET.get('url','default')
     if 'https://' not in web:
         web = 'https://'+web
-    status = urllib.request.urlopen(web).getcode()
-    #website_url = websiteurl(web_name=web)
-    #website_url.save()
-    if(status == 200):
+    try:
+        status = urllib.request.urlopen(web).getcode()
+        website_url = websiteurl(web_name=web,status='working')
+        website_url.save()
         return HttpResponse('WORKING')
-    else:
+    except:
+        website_url = websiteurl(web_name=web,status='not-working')
+        website_url.save()
         return HttpResponse('NOTWORKING')
+
+    
+    
+    
+    
