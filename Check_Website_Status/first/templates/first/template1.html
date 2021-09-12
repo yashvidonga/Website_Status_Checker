@@ -1,11 +1,12 @@
-<!DOCTYPE html>
+ {% load static %}
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="template1.css">
+    <title>Checkify</title>
+    <link rel="stylesheet" href="{% static 'first/template1.css' %}">
 </head>
 <body>
     <header>
@@ -17,7 +18,7 @@
             <ul class="menu">
               <li><a href="#home">Home</a></li>
               <li><a href="#about_us">About us</a></li>
-              <li><a href="#">Skills</a></li>
+              <li><a href="#">Contact</a></li>
               <li><a href=""></a></li>
             </ul>
           </div>
@@ -25,10 +26,10 @@
       </header>
       <section class="home" id="home">
         <div class="text">
-          <p>Check if the website is up in a click!</p>
+          <p>Check if your website is up in a click!</p>
         </div>
         <div class="circle">
-          <img src="\Check_Website_Status\first\templates\first\images1\018301-modified.png" alt="">
+          <img src="{% static 'first/images/Check1.png' %}" alt="">
         </div>
         <div=search>
           <form name="form" action="check/" method='get' >
@@ -39,6 +40,7 @@
               placeholder="Enter URL (Eg: https:/www.google.com)"
             >
             <button type="submit" class="verify">Verify</button>
+            <input type = "file" name = "upload" accept = ".csv" />
           </form>
           <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
@@ -57,6 +59,7 @@
       </section>
       <section class="about_us" id="about_us">
         <h2>About Checkify</h2>
+        <p>TEXT</p>
       </section>
 </body>
 </html>
