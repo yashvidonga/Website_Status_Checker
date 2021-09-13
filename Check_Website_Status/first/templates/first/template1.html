@@ -29,7 +29,7 @@
           <p>Check if your website is up in a click!</p>
         </div>
         <div class="circle">
-          <img src="{% static 'first/images/Check1.png' %}" alt="">
+        {% comment %} <img src="{% static 'first/images/Check1.png' %}" alt=""> {% endcomment %}
         </div>
         <div=search>
           <form name="form" action="check/" method='get' >
@@ -40,7 +40,12 @@
               placeholder="Enter URL (Eg: https:/www.google.com)"
             >
             <button type="submit" class="verify">Verify</button>
-            <input type = "file" name = "upload" accept = ".csv" />
+            
+          </form>
+          <form method = "POST" action="upload/" enctype = "multipart/form-data">
+            {% csrf_token %}
+            <input type = "file" name = "upload1" id = "upload1" accept = ".csv" />
+            <input type = "submit"> 
           </form>
           <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
@@ -53,7 +58,7 @@
       src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
       crossorigin="anonymous"
-    ></script>
+        ></script>
 
           <div>
       </section>
