@@ -47,6 +47,11 @@
             <input type = "file" name = "upload1" id = "upload1" accept = ".csv" />
             <input type = "submit"> 
           </form>
+          <div class="dic">
+            {% for key,value in dic.items %}
+            {{ value }}
+            {% endfor %}
+          </div>
           <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
     <script

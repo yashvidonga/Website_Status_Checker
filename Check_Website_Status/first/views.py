@@ -2,7 +2,8 @@ from django.http import HttpResponse
 from django.shortcuts import render
 from .models import websiteurl, FilesUpload
 import urllib
-
+import pandas as pd
+import csv
 
 def home(request):
     return render(request, 'first/template1.html')
@@ -28,7 +29,14 @@ def upload(request):
         return render(request, 'first/template1.html')
     if request.method == "POST":
         file2 = request.FILES["upload1"]
-        document = FilesUpload.objects.create(file=file2)
-        document.save()
-        return HttpResponse("File Uploaded")
+        df = pd.read_csv(file2)
+        dic={}
+        for i in df.iloc[:,0]:
+            try:
+                status = urllib.request.urlopen(i).getcode()
+                dic[i]="WORKING"
+            except:
+                dic[i]="NOT-WORKING"
+        print(dic)
+        return render(request, 'first/template1.html',{'dic':dic})
     return render(request, 'first/template1.html')

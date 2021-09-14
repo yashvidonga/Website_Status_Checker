@@ -50,6 +50,8 @@ body {
 .navbar .menu li a:hover {
   color: yellowgreen;
 }
+
+/*home*/
 .home {
   background: black;
 }
@@ -120,7 +122,11 @@ img {
   padding-top: 10%;
   padding-bottom: 0%;
 }
-
-.about_us {
+.dic{
   color: white;
+}
+
+/*about*/
+.about_us {
+  color: black;
 }
