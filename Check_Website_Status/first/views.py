@@ -18,6 +18,13 @@ def check(request):
         website_url = websiteurl(web_name=web, status='working')
         website_url.save()
         return HttpResponse('WORKING')
+    # except urllib.error.HTTPError as e:
+    #     # Return code error (e.g. 404, 501, ...)
+    #     return HttpResponse('NOTWORKING = {}'.format(e.code))
+
+    # except urllib.error.URLError as e:
+    #     # Not an HTTP-specific error (e.g. connection refused)
+    #     return HttpResponse('URL Error NOTWORKING {}'.format(e.code))
     except:
         website_url = websiteurl(web_name=web, status='not-working')
         website_url.save()
@@ -37,6 +44,5 @@ def upload(request):
                 dic[i]="WORKING"
             except:
                 dic[i]="NOT-WORKING"
-        print(dic)
         return render(request, 'first/template1.html',{'dic':dic})
     return render(request, 'first/template1.html')

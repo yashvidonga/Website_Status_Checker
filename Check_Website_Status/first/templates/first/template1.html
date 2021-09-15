@@ -1,5 +1,7 @@
+{% extends "first/layout.html"%} {% block body %}
  {% load static %}
- <!DOCTYPE html>
+ 
+ <!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -29,9 +31,10 @@
           <p>Check if your website is up in a click!</p>
         </div>
         <div class="circle">
-        {% comment %} <img src="{% static 'first/images/Check1.png' %}" alt=""> {% endcomment %}
-        </div>
-        <div=search>
+        {% comment %} <img src="{% static 'first/images/Check1.png' %}" alt=""> {% endcomment %} -->
+      
+      </div>
+        <!-- <div=search> -->
           <form name="form" action="check/" method='get' >
             <input
               class="URL"
@@ -48,12 +51,23 @@
             <input type = "submit"> 
           </form>
           <div class="dic">
+          <table>
+            <tr>
+              <th>urls</th>
+              <th>status</th>
+          </tr>
             {% for key,value in dic.items %}
-            {{ value }}
+            <tr>
+              <td> {{ key }} </td>
+              <td> {{ value }} </td>
+            </tr>
             {% endfor %}
+          </table>
           </div>
+          
           <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+          {% endblock %}
+          <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper)
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -72,4 +86,4 @@
         <p>TEXT</p>
       </section>
 </body>
-</html>
+</html> -->
