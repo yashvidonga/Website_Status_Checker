@@ -47,15 +47,16 @@
           </form>
           <form method = "POST" action="upload/" enctype = "multipart/form-data">
             {% csrf_token %}
-            <input type = "file" name = "upload1" id = "upload1" accept = ".csv" />
+            
+            <input type = "file" class="custom-file-input" name = "upload1" id = "upload1" accept = ".csv" />
             <input type = "submit"> 
           </form>
           <div class="dic">
           <table>
-            <tr>
+            <!-- <tr>
               <th>urls</th>
               <th>status</th>
-          </tr>
+          </tr> -->
             {% for key,value in dic.items %}
             <tr>
               <td> {{ key }} </td>
@@ -63,7 +64,7 @@
             </tr>
             {% endfor %}
           </table>
-          </div>
+        </div>
           
           <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
           {% endblock %}

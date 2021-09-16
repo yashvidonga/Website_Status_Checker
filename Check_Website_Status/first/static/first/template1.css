@@ -122,11 +122,73 @@ img {
   padding-top: 10%;
   padding-bottom: 0%;
 }
-.dic{
+.dic {
   color: white;
+}
+.custom-file-input{
+  width: 250px;
+  box-sizing: border-box;
+  background-color: green;
 }
 
 /*about*/
-.about_us {
-  color: black;
+.about_us .title {
+  position: relative;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 500;
+  margin-bottom: 60px;
+  padding-bottom: 20px;
+  font-family: "Ubuntu", "sans-serif";
+  color: white;
+}
+.about_us .title::after {
+  content: "";
+  color: white;
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  width: 180px;
+  height: 3px;
+  background: green;
+  transform: translateX(-50%);
+}
+.about_us .about-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+}
+.about_us .firstline {
+  font-family: "Ubuntu", "sans-serif";
+  font-size: 30px;
+  font-weight: 500;
+  text-align: center;
+  color: white;
+}
+.about_us .firstline a{
+  color: #018301;
+  font-weight: 300;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  padding-left: 3px;
+}
+.about_us .about-content p {
+  font-size: 20px;
+  text-align: justify;
+  color: white;
+}
+.about_us .text {
+  font-family: "ubuntu", "sans-serif";
+  font-size: 25px;
+  font-weight: 500;
+  margin-left: 5%;
+  margin-right: 5%;
+  text-align: justify;
+  color: white;
+}
+.about_us .about-content .coloumn-right a {
+  font-size: 25px;
+  text-align: center;
+  background: white;
 }
