@@ -103,6 +103,15 @@ input[type="text"]:focus {
   color: #018301;
   background-color: yellowgreen;
 }
+/* .home .search .submit{
+  background: green;
+  border-radius: 20px;
+  padding: 6px 20px 10px 20px;
+  font-family: "Trebuchet MS";
+  font-size: 20px;
+  font-weight: bolder;
+  color: white;
+} */
 img {
   width: 150px;
   height: 150px;
@@ -125,10 +134,15 @@ img {
 .dic {
   color: white;
 }
-.custom-file-input{
-  width: 250px;
-  box-sizing: border-box;
-  background-color: green;
+ .home .choose  {
+ background: green; 
+ border-radius: 20px;
+ margin-top: 23px; 
+ padding: 6px 20px 10px 20px; 
+ font-size: 20px; 
+ font-weight: bolder; 
+ color: white;
+
 }
 
 /*about*/
