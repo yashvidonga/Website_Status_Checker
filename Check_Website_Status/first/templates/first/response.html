@@ -1,15 +1,49 @@
+
 {% extends "first/layout.html"%} {% block body %}
  <!-- {% load static %} -->
+ 
+  <style>
+    table {
+      width: 800px;
+      color: white;
+      position: absolute;
+	    top: 50%;
+	    left: 22%;
+      font-size: 25px;
+      border: 2px solid white;
+      border-radius: 25px;
+    }
+    th {
+      padding: 0.5em 1em;
+      text-align: left;
+    }
+    td {
+      padding: 0.65em 1em;
+    }
+    
+    tbody tr {
+      transition: background 0.25s ease;
+    }
+    tbody tr:hover {
+      background: green;
+      border-radius: 25px;
+    }
+
+
+  </style>
+
  <section>
- <div style = "color:white">
-  {% if flag == 1 %}
+   {% if flag == 1 %}
    <table>
    {% for key,value in website_dict.items %}
-   <tr>
-     <td> {{ key }} </td>
-     <td> {{ value }} </td>
-   </tr>
+    <tbody>
+        <tr>
+          <td> {{ key }} </td>
+          <td> {{ value }} </td>
+        </tr>
+    </tbody>
    {% endfor %}
+
  </table>
  {% endif %}
  {% if flag == 2 %}
@@ -19,14 +53,22 @@
     <th>Status</th>
   </tr>
   {% for key,value in dic.items %}
+  <tbody>
   <tr>
     <td> {{ key }} </td>
     <td> {{ value }} </td>
   </tr>
+</tbody>
   {% endfor %}
 </table>
 {% endif %}
-  
+
+{% if flag == 3 %}
+ <script>
+   alert("Nothing was entered my friend")
+ </script>
+{% endif %}
  </div>
 </section>
+
  {% endblock %}

@@ -67,7 +67,7 @@ input[type="text"] {
   box-sizing: border-box;
   border: 2px solid #ccc;
   border-radius: 20px;
-  background-image: url("/static/first/images/searchicon.png");
+  background-image: url("/static/first/images/search_button_green.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: right;
@@ -123,7 +123,7 @@ img {
 .home .text {
   color: green;
   font-family: "Trebuchet MS";
-  font-size: 45px;
+  font-size: 48px;
   font-weight: 500;
   margin-left: 5%;
   margin-right: 5%;
@@ -146,17 +146,18 @@ img {
 }
 
 /*about*/
-.about_us .title {
+.about .title {
   position: relative;
   text-align: center;
-  font-size: 40px;
+  font-size: 30px;
   font-weight: 500;
   margin-bottom: 60px;
+  padding-top: 80px;
   padding-bottom: 20px;
   font-family: "Ubuntu", "sans-serif";
   color: white;
 }
-.about_us .title::after {
+.about .title::after {
   content: "";
   color: white;
   position: absolute;
@@ -164,45 +165,96 @@ img {
   left: 50%;
   width: 180px;
   height: 3px;
-  background: green;
+  background: linear-gradient(to right, green, yellowgreen);
   transform: translateX(-50%);
 }
-.about_us .about-content {
+/* .about .about-content {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   color: white;
-}
-.about_us .firstline {
+} */
+.about .firstline {
   font-family: "Ubuntu", "sans-serif";
   font-size: 30px;
   font-weight: 500;
   text-align: center;
   color: white;
 }
-.about_us .firstline a{
+.about .firstline  a{
   color: #018301;
   font-weight: 300;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   padding-left: 3px;
 }
-.about_us .about-content p {
+/* .about .about-content p {
   font-size: 20px;
   text-align: justify;
   color: white;
-}
-.about_us .text {
+} */
+.about .text {
   font-family: "ubuntu", "sans-serif";
-  font-size: 25px;
+  font-size: 30px;
   font-weight: 500;
   margin-left: 5%;
   margin-right: 5%;
   text-align: justify;
   color: white;
 }
-.about_us .about-content .coloumn-right a {
+/* .about .about-content .coloumn-right a {
   font-size: 25px;
   text-align: center;
   background: white;
+}  */
+/*footer*/
+.footer{
+  padding-top: 10%;
+}
+#contact_me {
+  display: table;
+  margin: 0 auto;
+}
+.contact_left h3{
+  font-family: "ubuntu", "sans-serif";
+  color: green;
+  text-transform: capitalize;
+  position: relative;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 500;
+}
+.address li{
+  display: block;
+  margin: 10px  0;
+}
+.address li i{
+  color:rgb(41, 130, 182);
+  font-size: 20px;
+  vertical-align: middle;
+}
+.address{
+  margin-top: 20px;
+}
+.address li span{
+  color: #f0f0f0;
+  font-size: 14px;
+  margin-left: 15px;
+  font-family: 'Montserrat', sans-serif;
+
+}
+.address li a{
+  color: #f0f0f0;
+  font-size: 14px;
+  margin-left: 8px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+}
+.address li a:hover{
+  text-decoration:none;
+  color: green;
 }

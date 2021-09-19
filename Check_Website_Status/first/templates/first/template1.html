@@ -1,6 +1,10 @@
 {% extends "first/layout.html"%} {% block body %}
  {% load static %}
- 
+ <script
+ src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+ integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+ crossorigin="anonymous"
+   ></script>
  <!-- <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -51,40 +55,54 @@
             <input type = "file" style="background-color: green;" class="custom-file-input" name = "upload1" id = "upload1" accept = ".csv" />
             <input type = "submit" style=" background: green; border-radius: 20px;margin-top: 23px; margin-left: 8%; padding: 6px 20px 10px 20px; font-size: 20px; font-weight: bolder; color: white;" > 
           </form>
-          <div class="dic">
-          <table>
-            <!-- <tr>
-              <th>urls</th>
-              <th>status</th>
-          </tr> -->
-            {% for key,value in dic.items %}
-            <tr>
-              <td> {{ key }} </td>
-              <td> {{ value }} </td>
-            </tr>
-            {% endfor %}
-          </table>
-        </div>
+          <br> <br> <br> <br> <br> <br> <br>
+          <section class="about" id="about">
+            <div class="max-width">
+              <h2 class="title">About us</h2>
+              <div class="firstline">
+                <p>We are the students of<a href = "https://kjsce.somaiya.edu/en" target="_blank" rel="noopener noreferrer"> K.J. Somaiya College of Engineering</a></p>
+              </div>
+                <div class="text">
+                  Checkify.com is a project created by KJSCE students through our in-house internship.  The project focused on learning to work as a team and developing technical skills.  HTML, CSS, Bootstrap, Python, Django were used to build this website.
+                </div>
+          </section>
+          <section id="contact">
+            <div class="footer_bg">
+            <div class="container">
+              <div class="row footer">
+                <div class="justify-content-center contact_left">
+                  <h3 class="text-center"><span>Contact Us</span></h3>
+                  <ul class="list-unstyled address" id="contact_me">
+                    <li><i class="fa fa-map-marker"></i><span>Mumbai, Maharashtra</span></li>
+                    <li><i class="fa fa-phone"></i><span>+91-9999-99999</span></li>
+                    <li><i class="fa fa-envelope"></i><a href="mailto:help@checkify.com">help@checkify.com</a></li>
+                  </ul>
+                </div>
+            </div>
+            </div>
+            </div>
+            </section>
           
-          <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+            {% if flag == 3 %}
+            <script>
+              alert("Nothing was entered my friend");
+            </script>
+           {% endif %}
+            </div>
+           </section>
           {% endblock %}
-          <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper)
+           <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper)
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
       crossorigin="anonymous"
     ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
-      crossorigin="anonymous"
-        ></script>
+   
 
           <div>
       </section>
-      <section class="about_us" id="about_us">
-        <h2>About Checkify</h2>
-        <p>TEXT</p>
-      </section>
+    
+    
+
 </body>
-</html> -->
+</html> --->
