@@ -39,8 +39,9 @@
       
       </div>
         <!-- <div=search> -->
-          <form name="form" action="check/" method='get' >
+          <form name="form" onsubmit="checkEmpty()" action="check/" method='get' >
             <input
+              id="urls"
               class="URL"
               type="text"
               name="url"
@@ -49,10 +50,10 @@
             <button type="submit" class="verify">Verify</button>
             
           </form>
-          <form method = "POST" action="upload/" class="fileupload" enctype = "multipart/form-data">
+          <form method = "POST" onsubmit="checkSubmit()" action="upload/" class="fileupload" enctype = "multipart/form-data">
             {% csrf_token %}
             
-            <input type = "file" style="background-color: green;" class="custom-file-input" name = "upload1" id = "upload1" accept = ".csv" />
+            <input id="file" type = "file" style="background-color: green;" class="custom-file-input" name = "upload1" id = "upload1" accept = ".csv" />
             <input type = "submit" style=" background: green; border-radius: 20px;margin-top: 23px; margin-left: 8%; padding: 6px 20px 10px 20px; font-size: 20px; font-weight: bolder; color: white;" > 
           </form>
           <br> <br> <br> <br> <br> <br> <br>
@@ -83,13 +84,25 @@
             </div>
             </section>
           
-            {% if flag == 3 %}
+            <!-- {% if flag == 3 %}
             <script>
               alert("Nothing was entered my friend");
             </script>
-           {% endif %}
+           {% endif %} -->
             </div>
            </section>
+           <script>
+            function checkEmpty(){
+             if (document.getElementById("urls").value.length == 0){
+               alert("Please Enter a URL");
+             }
+            }
+            function checkSubmit(){
+             if (document.getElementById("file").files.length == 0){
+               alert("Please Upload a file");
+             }
+            }
+          </script>
           {% endblock %}
            <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper)
     <script
